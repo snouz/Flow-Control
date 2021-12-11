@@ -25,6 +25,16 @@ data:extend(
   },
   {
     type = "item",
+    name = "underflow-valve",
+    icon = "__Flow Control__/graphics/icon/underflow-valve.png",
+    flags = {"goes-to-quickbar"},
+    subgroup = "energy-pipe-distribution",
+    order = "b[pipe]-c[small-pump]bb",
+    place_result = "underflow-valve",
+    stack_size = 50
+  },
+  {
+    type = "item",
     name = "express-pump",
     icon = "__Flow Control__/graphics/icon/express-pump.png",
     flags = {"goes-to-quickbar"},

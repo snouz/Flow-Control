@@ -12,4 +12,7 @@ table.insert(
   {type = "unlock-recipe",recipe = "overflow-valve"})
 table.insert(
   data.raw["technology"]["fluid-handling"].effects,
+  {type = "unlock-recipe",recipe = "underflow-valve"})
+table.insert(
+  data.raw["technology"]["fluid-handling"].effects,
   {type = "unlock-recipe",recipe = "express-pump"})

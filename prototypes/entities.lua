@@ -65,6 +65,15 @@ overflow_valve.fluid_box.base_level = 0.8
 overflow_valve.pictures.picture.sheet.filename =
   "__Flow Control__/graphics/entity/overflow-valve/overflow-valve.png"
 
+-- Underflow Valve ***********************************************************************
+underflow_valve = util.table.deepcopy(overflow_valve)
+underflow_valve.name = "underflow-valve"
+underflow_valve.icon = "__Flow Control__/graphics/icon/underflow-valve.png"
+underflow_valve.minable.result = "underflow-valve"
+underflow_valve.fluid_box.base_level = -0.2
+underflow_valve.pictures.picture.sheet.filename =
+  "__Flow Control__/graphics/entity/underflow-valve/underflow-valve.png"
+
 -- Express Pump **************************************************************************
 express_pump = util.table.deepcopy(data.raw["pump"]["small-pump"])
 express_pump.name = "express-pump"
@@ -155,6 +164,7 @@ data:extend(
 {
   check_valve,
   overflow_valve,
+  underflow_valve,
   express_pump,
   pipe_elbow,
   pipe_junction,

@@ -37,6 +37,20 @@ data:extend(
   },
   {
     type = "recipe",
+    name = "underflow-valve",
+    energy_required = 2,
+    enabled = false,
+    ingredients =
+    {
+      {"electronic-circuit", 1},
+      {"steel-plate", 1},
+      {"iron-gear-wheel", 1},
+      {"pipe", 1}
+    },
+    result = "underflow-valve"
+  },
+  {
+    type = "recipe",
     name = "express-pump",
     energy_required = 2,
     enabled = false,
