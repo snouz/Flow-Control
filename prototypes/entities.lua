@@ -1,70 +1,59 @@
--- Check Valve ***************************************************************************
-check_valve =
+empty_sprite =
 {
-  type = "storage-tank",
-  name = "check-valve",
-  icon = "__Flow Control__/graphics/icon/check-valve.png",
-  flags = {"placeable-player", "player-creation"},
-  minable = {mining_time = 1, result = "check-valve"},
-  max_health = 80,
-  corpse = "small-remnants",
-  resistances = data.raw["pump"]["small-pump"].resistances,
-  fast_replaceable_group = "pipe",
-  collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
-  selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-  fluid_box =
+  filename = "__core__/graphics/empty.png",
+  priority = "extra-high",
+  width = 1,
+  height = 1
+}
+
+-- Check Valve ***************************************************************************
+check_valve = util.table.deepcopy(data.raw["storage-tank"]["storage-tank"])
+check_valve.name = "check-valve"
+check_valve.icon = "__Flow Control__/graphics/icon/check-valve.png"
+check_valve.flags = {"placeable-neutral", "player-creation"}
+check_valve.minable = {mining_time = 1, result = "check-valve"}
+check_valve.max_health = 80
+check_valve.corpse = "small-remnants"
+check_valve.resistances = data.raw["pump"]["small-pump"].resistances
+check_valve.fast_replaceable_group = "pipe"
+check_valve.collision_box = data.raw["pipe"]["pipe"].collision_box
+check_valve.selection_box = data.raw["pipe"]["pipe"].selection_box
+check_valve.fluid_box =
+{
+  base_area = 1,
+  pipe_covers = pipecoverspictures(),
+  pipe_connections =
   {
-    base_area = 1,
-    pipe_covers = pipecoverspictures(),
-    pipe_connections =
-    {
-      { position = {0, 1}, type="output" },
-      { position = {0, -1} }
-    },
+    { position = {0, 1}, type="output" },
+    { position = {0, -1} }
   },
-  window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
-  pictures =
+}
+check_valve.pictures =
+{
+  picture =
   {
-    picture =
+    sheet =
     {
-      sheet =
-      {
-        filename = "__Flow Control__/graphics/entity/check-valve/check-valve.png",
-        priority = "extra-high",
-        frames = 4,
-        width = 58,
-        height = 55,
-        shift = {0.28125, -0.078125}
-      }
-    },
-    fluid_background =
-    {
-      filename = "__core__/graphics/empty.png",
+      filename = "__Flow Control__/graphics/entity/check-valve/check-valve.png",
       priority = "extra-high",
-      width = 1,
-      height = 1
-    },
-    window_background =
-    {
-      filename = "__core__/graphics/empty.png",
-      priority = "extra-high",
-      width = 1,
-      height = 1
-    },
-    flow_sprite =
-    {
-      filename = "__core__/graphics/empty.png",
-      priority = "extra-high",
-      width = 1,
-      height = 1
+      frames = 4,
+      width = 58,
+      height = 55,
+      shift = {0.28125, -0.078125}
     }
   },
-  flow_length_in_ticks = 360,
-  vehicle_impact_sound = data.raw["pump"]["small-pump"].vehicle_impact_sound,
-  circuit_wire_connection_points = data.raw["pump"]["small-pump"].circuit_wire_connection_points,
-  circuit_connector_sprites = data.raw["pump"]["small-pump"].circuit_connector_sprites,
-  circuit_wire_max_distance = data.raw["pump"]["small-pump"].circuit_wire_max_distance
+  fluid_background = empty_sprite,
+  window_background = empty_sprite,
+  flow_sprite = empty_sprite
 }
+check_valve.vehicle_impact_sound =
+  data.raw["pump"]["small-pump"].vehicle_impact_sound
+check_valve.circuit_wire_connection_points =
+  data.raw["pump"]["small-pump"].circuit_wire_connection_points
+check_valve.circuit_connector_sprites =
+  data.raw["pump"]["small-pump"].circuit_connector_sprites
+check_valve.circuit_wire_max_distance =
+  data.raw["pump"]["small-pump"].circuit_wire_max_distance
 
 -- Overflow Valve ************************************************************************
 overflow_valve = util.table.deepcopy(check_valve)
@@ -96,82 +85,40 @@ express_pump.animations.west.filename =
 express_pump.animations.west.animation_speed = 1
 
 -- Pipe Elbow ****************************************************************************
-pipe_elbow = 
+pipe_elbow = util.table.deepcopy(check_valve)
+pipe_elbow.name = "pipe-elbow"
+pipe_elbow.icon = "__Flow Control__/graphics/icon/pipe-elbow.png"
+pipe_elbow.minable = data.raw["pipe"]["pipe"].minable
+pipe_elbow.max_health = data.raw["pipe"]["pipe"].max_health
+pipe_elbow.resistances = data.raw["pipe"]["pipe"].resistances
+pipe_elbow.fluid_box =
 {
-  type = "pipe-to-ground",
-  name = "pipe-elbow",
-  icon = "__Flow Control__/graphics/icon/pipe-elbow.png",
-  flags = {"placeable-neutral", "player-creation"},
-  minable = {hardness = 0.2, mining_time = 0.5, result = "pipe"},
-  max_health = 50,
-  corpse = "small-remnants",
-  resistances =
+  base_area = 1,
+  pipe_covers = pipecoverspictures(),
+  pipe_connections =
   {
-    {
-      type = "fire",
-      percent = 90
-    }
+    { position = {1, 0} },
+    { position = {0, 1} }
   },
-  fast_replaceable_group = "pipe",
-  collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
-  selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
-  fluid_box =
+}
+pipe_elbow.pictures =
+{
+  picture =
   {
-    base_area = 1,
-    pipe_covers = pipecoverspictures(),
-    pipe_connections =
-    {
-      { position = {1, 0} },
-      { position = {0, 1} }
-    },
-  },
-  underground_sprite =
-  {
-    filename = "__core__/graphics/empty.png",
-    priority = "high",
-    width = 1,
-    height = 1
-  },
-  vehicle_impact_sound =
-  {
-    filename = "__base__/sound/car-metal-impact.ogg",
-    volume = 0.65
-  },
-  pictures =
-  {
-    up =
+    sheet =
     {
       filename = "__Flow Control__/graphics/entity/pipes/pipe-elbow.png",
-      priority = "high",
+      priority = "extra-high",
+      frames = 4,
       width = 44,
       height = 44
-    },
-    down =
-    {
-      filename = "__Flow Control__/graphics/entity/pipes/pipe-elbow.png",
-      priority = "high",
-      width = 44,
-      height = 44,
-      x = 88
-    },
-    left =
-    {
-      filename = "__Flow Control__/graphics/entity/pipes/pipe-elbow.png",
-      priority = "high",
-      width = 44,
-      height = 44,
-      x = 132
-    },
-    right =
-    {
-      filename = "__Flow Control__/graphics/entity/pipes/pipe-elbow.png",
-      priority = "high",
-      width = 44,
-      height = 44,
-      x = 44
-    },
-  }
+    }
+  },
+  fluid_background = empty_sprite,
+  window_background = empty_sprite,
+  flow_sprite = empty_sprite
 }
+pipe_elbow.circuit_wire_max_distance = 0
 
 -- Pipe Junction *************************************************************************
 pipe_junction = util.table.deepcopy(pipe_elbow)
@@ -183,13 +130,7 @@ pipe_junction.fluid_box.pipe_connections =
   { position = {0, 1} },
   { position = {-1, 0} }
 }
-pipe_junction.pictures.up.filename =
-  "__Flow Control__/graphics/entity/pipes/pipe-junction.png"
-pipe_junction.pictures.down.filename =
-  "__Flow Control__/graphics/entity/pipes/pipe-junction.png"
-pipe_junction.pictures.left.filename =
-  "__Flow Control__/graphics/entity/pipes/pipe-junction.png"
-pipe_junction.pictures.right.filename =
+pipe_junction.pictures.picture.sheet.filename =
   "__Flow Control__/graphics/entity/pipes/pipe-junction.png"
 
 -- Pipe Straight *************************************************************************
@@ -201,16 +142,9 @@ pipe_straight.fluid_box.pipe_connections =
   { position = {0, -1} },
   { position = {0, 1} }
 }
-pipe_straight.pictures.up.filename =
+pipe_straight.pictures.picture.sheet.filename =
   "__Flow Control__/graphics/entity/pipes/pipe-straight.png"
-pipe_straight.pictures.down.filename =
-  "__Flow Control__/graphics/entity/pipes/pipe-straight.png"
-pipe_straight.pictures.down.x = nil
-pipe_straight.pictures.left.filename =
-  "__Flow Control__/graphics/entity/pipes/pipe-straight.png"
-pipe_straight.pictures.left.x = 44
-pipe_straight.pictures.right.filename =
-  "__Flow Control__/graphics/entity/pipes/pipe-straight.png"
+pipe_straight.pictures.picture.sheet.frames = 2
 
 -- Small Pump ****************************************************************************
 data.raw["pump"]["small-pump"].icon = "__Flow Control__/graphics/icon/small-pump.png"
