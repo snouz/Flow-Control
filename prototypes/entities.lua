@@ -32,14 +32,10 @@ pipe_elbow.pictures =
 {
   picture =
   {
-    sheet =
-    {
-      filename = "__Flow Control__/graphics/entity/pipes/pipe-elbow.png",
-      priority = "extra-high",
-      frames = 4,
-      width = 44,
-      height = 44
-    }
+    north = pipepictures().corner_down_right,
+    east = pipepictures().corner_down_left,
+    south = pipepictures().corner_up_left,
+    west = pipepictures().corner_up_right
   },
   gas_flow = empty_sprite,
   fluid_background = empty_sprite,
@@ -59,8 +55,22 @@ pipe_junction.fluid_box.pipe_connections =
   { position = {0, 1} },
   { position = {-1, 0} }
 }
-pipe_junction.pictures.picture.sheet.filename =
-  "__Flow Control__/graphics/entity/pipes/pipe-junction.png"
+-- pipe_junction.pictures.picture.sheet.filename =
+  -- "__Flow Control__/graphics/entity/pipes/pipe-junction.png"
+pipe_junction.pictures =
+{
+  picture =
+  {
+    north = pipepictures().t_down,
+    east = pipepictures().t_left,
+    south = pipepictures().t_up,
+    west = pipepictures().t_right
+  },
+  gas_flow = empty_sprite,
+  fluid_background = empty_sprite,
+  window_background = empty_sprite,
+  flow_sprite = empty_sprite
+}
 
 -- Pipe Straight *************************************************************************
 pipe_straight = util.table.deepcopy(pipe_elbow)
@@ -71,9 +81,20 @@ pipe_straight.fluid_box.pipe_connections =
   { position = {0, -1} },
   { position = {0, 1} }
 }
-pipe_straight.pictures.picture.sheet.filename =
-  "__Flow Control__/graphics/entity/pipes/pipe-straight.png"
-pipe_straight.pictures.picture.sheet.frames = 2
+pipe_straight.pictures =
+{
+  picture =
+  {
+    north = pipepictures().straight_vertical,
+    east = pipepictures().straight_horizontal,
+    south = pipepictures().straight_vertical,
+    west = pipepictures().straight_horizontal
+  },
+  gas_flow = empty_sprite,
+  fluid_background = empty_sprite,
+  window_background = empty_sprite,
+  flow_sprite = empty_sprite
+}
 
 -- Check Valve ***************************************************************************
 check_valve = util.table.deepcopy(pipe_straight)
@@ -90,14 +111,17 @@ check_valve.fluid_box =
     { position = {0, -1} }
   },
 }
-check_valve.pictures.picture.sheet =
+check_valve.pictures.picture =
 {
-  filename = "__Flow Control__/graphics/entity/check-valve/check-valve.png",
-  priority = "extra-high",
-  frames = 4,
-  width = 58,
-  height = 55,
-  shift = {0.28125, -0.078125}
+  sheet =
+  {
+    filename = "__Flow Control__/graphics/entity/check-valve/check-valve.png",
+    priority = "extra-high",
+    frames = 4,
+    width = 58,
+    height = 55,
+    shift = {0.28125, -0.078125}
+  }
 }
 check_valve.circuit_wire_connection_points =
 {
