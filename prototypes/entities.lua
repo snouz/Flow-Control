@@ -3,104 +3,21 @@ empty_sprite =
   filename = "__core__/graphics/empty.png",
   priority = "extra-high",
   width = 1,
-  height = 1
+  height = 1,
+  frame_count = 1
 }
-
--- Check Valve ***************************************************************************
-check_valve = util.table.deepcopy(data.raw["storage-tank"]["storage-tank"])
-check_valve.name = "check-valve"
-check_valve.icon = "__Flow Control__/graphics/icon/check-valve.png"
-check_valve.flags = {"placeable-neutral", "player-creation"}
-check_valve.minable = {mining_time = 1, result = "check-valve"}
-check_valve.max_health = 80
-check_valve.corpse = "small-remnants"
-check_valve.resistances = data.raw["pump"]["small-pump"].resistances
-check_valve.fast_replaceable_group = "pipe"
-check_valve.collision_box = data.raw["pipe"]["pipe"].collision_box
-check_valve.selection_box = data.raw["pipe"]["pipe"].selection_box
-check_valve.fluid_box =
-{
-  base_area = 1,
-  pipe_covers = pipecoverspictures(),
-  pipe_connections =
-  {
-    { position = {0, 1}, type="output" },
-    { position = {0, -1} }
-  },
-}
-check_valve.pictures =
-{
-  picture =
-  {
-    sheet =
-    {
-      filename = "__Flow Control__/graphics/entity/check-valve/check-valve.png",
-      priority = "extra-high",
-      frames = 4,
-      width = 58,
-      height = 55,
-      shift = {0.28125, -0.078125}
-    }
-  },
-  fluid_background = empty_sprite,
-  window_background = empty_sprite,
-  flow_sprite = empty_sprite
-}
-check_valve.vehicle_impact_sound =
-  data.raw["pump"]["small-pump"].vehicle_impact_sound
-check_valve.working_sound = nil
-check_valve.circuit_wire_connection_points =
-  data.raw["pump"]["small-pump"].circuit_wire_connection_points
-check_valve.circuit_connector_sprites =
-  data.raw["pump"]["small-pump"].circuit_connector_sprites
-check_valve.circuit_wire_max_distance =
-  data.raw["pump"]["small-pump"].circuit_wire_max_distance
-
--- Overflow Valve ************************************************************************
-overflow_valve = util.table.deepcopy(check_valve)
-overflow_valve.name = "overflow-valve"
-overflow_valve.icon = "__Flow Control__/graphics/icon/overflow-valve.png"
-overflow_valve.minable.result = "overflow-valve"
-overflow_valve.fluid_box.base_level = 0.8
-overflow_valve.pictures.picture.sheet.filename =
-  "__Flow Control__/graphics/entity/overflow-valve/overflow-valve.png"
-
--- Underflow Valve ***********************************************************************
-underflow_valve = util.table.deepcopy(overflow_valve)
-underflow_valve.name = "underflow-valve"
-underflow_valve.icon = "__Flow Control__/graphics/icon/underflow-valve.png"
-underflow_valve.minable.result = "underflow-valve"
-underflow_valve.fluid_box.base_level = -0.2
-underflow_valve.pictures.picture.sheet.filename =
-  "__Flow Control__/graphics/entity/underflow-valve/underflow-valve.png"
-
--- Express Pump **************************************************************************
-express_pump = util.table.deepcopy(data.raw["pump"]["small-pump"])
-express_pump.name = "express-pump"
-express_pump.icon = "__Flow Control__/graphics/icon/express-pump.png"
-express_pump.minable.result = "express-pump"
-express_pump.energy_usage = "120kW"
-express_pump.pumping_speed = 2.5
-express_pump.animations.north.filename =
-  "__Flow Control__/graphics/entity/express-pump/express-pump-up.png"
-express_pump.animations.north.animation_speed = 1
-express_pump.animations.east.filename =
-  "__Flow Control__/graphics/entity/express-pump/express-pump-right.png"
-express_pump.animations.east.animation_speed = 1
-express_pump.animations.south.filename =
-  "__Flow Control__/graphics/entity/express-pump/express-pump-down.png"
-express_pump.animations.south.animation_speed = 1
-express_pump.animations.west.filename =
-  "__Flow Control__/graphics/entity/express-pump/express-pump-left.png"
-express_pump.animations.west.animation_speed = 1
 
 -- Pipe Elbow ****************************************************************************
-pipe_elbow = util.table.deepcopy(check_valve)
+pipe_elbow = util.table.deepcopy(data.raw["storage-tank"]["storage-tank"])
 pipe_elbow.name = "pipe-elbow"
 pipe_elbow.icon = "__Flow Control__/graphics/icon/pipe-elbow.png"
 pipe_elbow.minable = data.raw["pipe"]["pipe"].minable
+pipe_elbow.corpse = "small-remnants"
 pipe_elbow.max_health = data.raw["pipe"]["pipe"].max_health
 pipe_elbow.resistances = data.raw["pipe"]["pipe"].resistances
+pipe_elbow.fast_replaceable_group = data.raw["pipe"]["pipe"].fast_replaceable_group
+pipe_elbow.collision_box = data.raw["pipe"]["pipe"].collision_box
+pipe_elbow.selection_box = data.raw["pipe"]["pipe"].selection_box
 pipe_elbow.fluid_box =
 {
   base_area = 1,
@@ -124,11 +41,13 @@ pipe_elbow.pictures =
       height = 44
     }
   },
+  gas_flow = empty_sprite,
   fluid_background = empty_sprite,
   window_background = empty_sprite,
   flow_sprite = empty_sprite
 }
 pipe_elbow.circuit_wire_max_distance = 0
+pipe_elbow.working_sound = nil
 
 -- Pipe Junction *************************************************************************
 pipe_junction = util.table.deepcopy(pipe_elbow)
@@ -156,8 +75,108 @@ pipe_straight.pictures.picture.sheet.filename =
   "__Flow Control__/graphics/entity/pipes/pipe-straight.png"
 pipe_straight.pictures.picture.sheet.frames = 2
 
--- Small Pump ****************************************************************************
-data.raw["pump"]["small-pump"].icon = "__Flow Control__/graphics/icon/small-pump.png"
+-- Check Valve ***************************************************************************
+check_valve = util.table.deepcopy(pipe_straight)
+check_valve.name = "check-valve"
+check_valve.icon = "__Flow Control__/graphics/icon/check-valve.png"
+check_valve.minable = {mining_time = 1, result = "check-valve"}
+check_valve.fluid_box =
+{
+  base_area = 1,
+  pipe_covers = pipecoverspictures(),
+  pipe_connections =
+  {
+    { position = {0, 1}, type="output" },
+    { position = {0, -1} }
+  },
+}
+check_valve.pictures.picture.sheet =
+{
+  filename = "__Flow Control__/graphics/entity/check-valve/check-valve.png",
+  priority = "extra-high",
+  frames = 4,
+  width = 58,
+  height = 55,
+  shift = {0.28125, -0.078125}
+}
+check_valve.circuit_wire_connection_points =
+{
+  {
+    shadow =
+    {
+      red = {0.171875, 0.140625},
+      green = {0.171875, 0.265625},
+    },
+    wire =
+    {
+      red = {-0.53125, -0.15625},
+      green = {-0.53125, 0},
+    }
+  },
+  {
+    shadow =
+    {
+      red = {0.890625, 0.703125},
+      green = {0.75, 0.75},
+    },
+    wire =
+    {
+      red = {0.34375, 0.28125},
+      green = {0.34375, 0.4375},
+    }
+  },
+  {
+    shadow =
+    {
+      red = {0.15625, 0.0625},
+      green = {0.09375, 0.125},
+    },
+    wire =
+    {
+      red = {-0.53125, -0.09375},
+      green = {-0.53125, 0.03125},
+    }
+  },
+  {
+    shadow =
+    {
+      red = {0.796875, 0.703125},
+      green = {0.625, 0.75},
+    },
+    wire =
+    {
+      red = {0.40625, 0.28125},
+      green = {0.40625, 0.4375},
+    }
+  }
+}
+check_valve.circuit_connector_sprites =
+{
+  get_circuit_connector_sprites({-0.40625, -0.3125}, nil, 24),
+  get_circuit_connector_sprites({0.125, 0.21875}, {0.34375, 0.40625}, 18),
+  get_circuit_connector_sprites({-0.40625, -0.25}, nil, 24),
+  get_circuit_connector_sprites({0.203125, 0.203125}, {0.25, 0.40625}, 18),
+}
+check_valve.circuit_wire_max_distance =
+  data.raw["storage-tank"]["storage-tank"].circuit_wire_max_distance
+
+-- Overflow Valve ************************************************************************
+overflow_valve = util.table.deepcopy(check_valve)
+overflow_valve.name = "overflow-valve"
+overflow_valve.icon = "__Flow Control__/graphics/icon/overflow-valve.png"
+overflow_valve.minable.result = "overflow-valve"
+overflow_valve.fluid_box.base_level = 0.8
+overflow_valve.pictures.picture.sheet.filename =
+  "__Flow Control__/graphics/entity/overflow-valve/overflow-valve.png"
+
+-- Underflow Valve ***********************************************************************
+underflow_valve = util.table.deepcopy(overflow_valve)
+underflow_valve.name = "underflow-valve"
+underflow_valve.icon = "__Flow Control__/graphics/icon/underflow-valve.png"
+underflow_valve.minable.result = "underflow-valve"
+underflow_valve.fluid_box.base_level = -0.2
+underflow_valve.pictures.picture.sheet.filename =
+  "__Flow Control__/graphics/entity/underflow-valve/underflow-valve.png"
 
 -- Insert Entities ***********************************************************************
 data:extend(
@@ -165,7 +184,6 @@ data:extend(
   check_valve,
   overflow_valve,
   underflow_valve,
-  express_pump,
   pipe_elbow,
   pipe_junction,
   pipe_straight

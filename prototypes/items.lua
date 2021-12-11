@@ -1,6 +1,3 @@
-data.raw["item"]["small-pump"].icon = "__Flow Control__/graphics/icon/small-pump.png"
-data.raw["item"]["small-pump"].order = "b[pipe]-c[small-pump]c"
-
 data:extend(
 {
   {
@@ -9,7 +6,7 @@ data:extend(
     icon = "__Flow Control__/graphics/icon/check-valve.png",
     flags = {"goes-to-quickbar"},
     subgroup = "energy-pipe-distribution",
-    order = "b[pipe]-c[small-pump]a",
+    order = "b[pipe]-c[pump]a",
     place_result = "check-valve",
     stack_size = 50
   },
@@ -19,7 +16,7 @@ data:extend(
     icon = "__Flow Control__/graphics/icon/overflow-valve.png",
     flags = {"goes-to-quickbar"},
     subgroup = "energy-pipe-distribution",
-    order = "b[pipe]-c[small-pump]b",
+    order = "b[pipe]-c[pump]b",
     place_result = "overflow-valve",
     stack_size = 50
   },
@@ -29,18 +26,8 @@ data:extend(
     icon = "__Flow Control__/graphics/icon/underflow-valve.png",
     flags = {"goes-to-quickbar"},
     subgroup = "energy-pipe-distribution",
-    order = "b[pipe]-c[small-pump]bb",
+    order = "b[pipe]-c[pump]bb",
     place_result = "underflow-valve",
-    stack_size = 50
-  },
-  {
-    type = "item",
-    name = "express-pump",
-    icon = "__Flow Control__/graphics/icon/express-pump.png",
-    flags = {"goes-to-quickbar"},
-    subgroup = "energy-pipe-distribution",
-    order = "b[pipe]-c[small-pump]d",
-    place_result = "express-pump",
     stack_size = 50
   },
   {

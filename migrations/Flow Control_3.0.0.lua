@@ -9,8 +9,6 @@ for index, force in pairs(game.forces) do
   local tech = force.technologies
   local recipes = force.recipes
 
-  recipes["small-pump"].enabled = true
-
   -- Unlock researched recipes
   if tech["fluid-handling"] and tech["fluid-handling"].researched then
     if recipes["check-valve"] then
@@ -21,9 +19,6 @@ for index, force in pairs(game.forces) do
     end
     if recipes["underflow-valve"] then
       recipes["underflow-valve"].enabled = true
-    end
-    if recipes["express-pump"] then
-      recipes["express-pump"].enabled = true
     end
   end
 end
