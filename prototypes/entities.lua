@@ -5,16 +5,10 @@ check_valve =
   name = "check-valve",
   icon = "__Flow Control__/graphics/icon/check-valve.png",
   flags = {"placeable-player", "player-creation"},
-  minable = {hardness = 0.2, mining_time = 0.5, result = "check-valve"},
+  minable = {mining_time = 1, result = "check-valve"},
   max_health = 80,
   corpse = "small-remnants",
-  resistances =
-  {
-    {
-      type = "fire",
-      percent = 70
-    }
-  },
+  resistances = data.raw["pump"]["small-pump"].resistances,
   fast_replaceable_group = "pipe",
   collision_box = {{-0.29, -0.29}, {0.29, 0.29}},
   selection_box = {{-0.5, -0.5}, {0.5, 0.5}},
@@ -24,10 +18,8 @@ check_valve =
     pipe_covers = pipecoverspictures(),
     pipe_connections =
     {
-      -- { position = {0, 1}, type="output"},
-      { position = {0, 1} },
-      { position = {0, -1}, type="input"}
-      -- { position = {0, -1} }
+      { position = {0, 1}, type="output" },
+      { position = {0, -1} }
     },
   },
   window_bounding_box = {{-0.125, 0.6875}, {0.1875, 1.1875}},
@@ -68,70 +60,10 @@ check_valve =
     }
   },
   flow_length_in_ticks = 360,
-  vehicle_impact_sound =
-  {
-    filename = "__base__/sound/car-metal-impact.ogg",
-    volume = 0.65
-  },
-  circuit_wire_connection_points =
-    {
-      {
-        shadow =
-        {
-          red = {0.171875, 0.140625},
-          green = {0.171875, 0.265625},
-        },
-        wire =
-        {
-          red = {-0.53125, -0.15625},
-          green = {-0.53125, 0},
-        }
-      },
-      {
-        shadow =
-        {
-          red = {0.890625, 0.703125},
-          green = {0.75, 0.75},
-        },
-        wire =
-        {
-          red = {0.34375, 0.28125},
-          green = {0.34375, 0.4375},
-        }
-      },
-      {
-        shadow =
-        {
-          red = {0.15625, 0.0625},
-          green = {0.09375, 0.125},
-        },
-        wire =
-        {
-          red = {-0.53125, -0.09375},
-          green = {-0.53125, 0.03125},
-        }
-      },
-      {
-        shadow =
-        {
-          red = {0.796875, 0.703125},
-          green = {0.625, 0.75},
-        },
-        wire =
-        {
-          red = {0.40625, 0.28125},
-          green = {0.40625, 0.4375},
-        }
-      }
-    },
-    circuit_connector_sprites =
-    {
-      get_circuit_connector_sprites({-0.40625, -0.3125}, nil, 24),
-      get_circuit_connector_sprites({0.125, 0.21875}, {0.34375, 0.40625}, 18),
-      get_circuit_connector_sprites({-0.40625, -0.25}, nil, 24),
-      get_circuit_connector_sprites({0.203125, 0.203125}, {0.25, 0.40625}, 18),
-    },
-    circuit_wire_max_distance = 7.5
+  vehicle_impact_sound = data.raw["pump"]["small-pump"].vehicle_impact_sound,
+  circuit_wire_connection_points = data.raw["pump"]["small-pump"].circuit_wire_connection_points,
+  circuit_connector_sprites = data.raw["pump"]["small-pump"].circuit_connector_sprites,
+  circuit_wire_max_distance = data.raw["pump"]["small-pump"].circuit_wire_max_distance
 }
 
 -- Overflow Valve ************************************************************************
@@ -140,11 +72,6 @@ overflow_valve.name = "overflow-valve"
 overflow_valve.icon = "__Flow Control__/graphics/icon/overflow-valve.png"
 overflow_valve.minable.result = "overflow-valve"
 overflow_valve.fluid_box.base_level = 0.8
-overflow_valve.fluid_box.pipe_connections =
-{
-  { position = {0, 1}, type="output"},
-  { position = {0, -1} }
-}
 overflow_valve.pictures.picture.sheet.filename =
   "__Flow Control__/graphics/entity/overflow-valve/overflow-valve.png"
 

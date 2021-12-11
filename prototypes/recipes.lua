@@ -1,3 +1,11 @@
+data.raw["recipe"]["small-pump"].enabled = true
+data.raw["recipe"]["small-pump"].ingredients =
+{
+  {"electronic-circuit", 2},
+  {"pipe", 1},
+  {"iron-gear-wheel", 1}
+}
+
 data:extend(
 {
   {
@@ -34,9 +42,9 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"small-pump", 3},
-      {"steel-plate", 4},
-      {"pipe", 1}
+      {"electric-engine-unit", 1},
+      {"steel-plate", 1},
+      {"small-pump", 1}
     },
     result= "express-pump"
   },
