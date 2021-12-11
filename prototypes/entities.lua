@@ -11,8 +11,11 @@ empty_sprite =
 pipe_elbow = util.table.deepcopy(data.raw["storage-tank"]["storage-tank"])
 pipe_elbow.name = "pipe-elbow"
 pipe_elbow.icon = "__Flow Control__/graphics/icon/pipe-elbow.png"
+pipe_elbow.icon_size = 32
+pipe_elbow.icon_mipmaps = nil
 pipe_elbow.minable = data.raw["pipe"]["pipe"].minable
-pipe_elbow.corpse = "small-remnants"
+-- pipe_elbow.corpse = "small-remnants"
+pipe_elbow.corpse = "pipe-remnants"
 pipe_elbow.max_health = data.raw["pipe"]["pipe"].max_health
 pipe_elbow.resistances = data.raw["pipe"]["pipe"].resistances
 pipe_elbow.fast_replaceable_group = data.raw["pipe"]["pipe"].fast_replaceable_group
@@ -101,6 +104,7 @@ pipe_straight.pictures =
 check_valve = util.table.deepcopy(pipe_straight)
 check_valve.name = "check-valve"
 check_valve.icon = "__Flow Control__/graphics/icon/check-valve.png"
+-- check_valve.icon_size = 32
 check_valve.minable = {mining_time = 1, result = "check-valve"}
 check_valve.fluid_box =
 {
