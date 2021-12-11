@@ -7,7 +7,7 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"steel-plate", 1},
+      {"iron-plate", 1},
       {"iron-gear-wheel", 1},
       {"pipe", 1}
     },
@@ -21,7 +21,7 @@ data:extend(
     ingredients =
     {
       {"electronic-circuit", 1},
-      {"steel-plate", 1},
+      {"iron-plate", 1},
       {"iron-gear-wheel", 1},
       {"pipe", 1}
     },
@@ -35,7 +35,7 @@ data:extend(
     ingredients =
     {
       {"electronic-circuit", 1},
-      {"steel-plate", 1},
+      {"iron-plate", 1},
       {"iron-gear-wheel", 1},
       {"pipe", 1}
     },
