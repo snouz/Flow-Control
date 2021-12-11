@@ -175,13 +175,13 @@ check_valve.circuit_wire_connection_points =
     }
   }
 }
-check_valve.circuit_connector_sprites =
-{
-  get_circuit_connector_sprites({-0.40625, -0.3125}, nil, 24),
-  get_circuit_connector_sprites({0.125, 0.21875}, {0.34375, 0.40625}, 18),
-  get_circuit_connector_sprites({-0.40625, -0.25}, nil, 24),
-  get_circuit_connector_sprites({0.203125, 0.203125}, {0.25, 0.40625}, 18),
-}
+check_valve.circuit_connector_sprites = circuit_connector_definitions["inserter"].sprites
+-- {
+  -- get_circuit_connector_sprites({-0.40625, -0.3125}, nil, 24),
+  -- get_circuit_connector_sprites({0.125, 0.21875}, {0.34375, 0.40625}, 18),
+  -- get_circuit_connector_sprites({-0.40625, -0.25}, nil, 24),
+  -- get_circuit_connector_sprites({0.203125, 0.203125}, {0.25, 0.40625}, 18),
+-- }
 check_valve.circuit_wire_max_distance =
   data.raw["storage-tank"]["storage-tank"].circuit_wire_max_distance
 
