@@ -28,6 +28,7 @@ pipe_elbow.fluid_box =
     { position = {0, 1} }
   },
 }
+pipe_elbow.two_direction_only = false
 pipe_elbow.pictures =
 {
   picture =
