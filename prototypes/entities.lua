@@ -48,6 +48,7 @@ check_valve.pictures =
 }
 check_valve.vehicle_impact_sound =
   data.raw["pump"]["small-pump"].vehicle_impact_sound
+check_valve.working_sound = nil
 check_valve.circuit_wire_connection_points =
   data.raw["pump"]["small-pump"].circuit_wire_connection_points
 check_valve.circuit_connector_sprites =
