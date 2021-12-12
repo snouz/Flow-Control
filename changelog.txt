@@ -6,6 +6,9 @@ Date: 12. 12. 2021
   Changes:
     - Valves visuals redone (in HD).
     - New icons.
+    - New technology for valves.
+    - Bots can now use normal pipes to place restricted pipes.
+    - Added a setting to let you pick up each type of restricted pipe instead of reverting back to normal pipes.
     - Refreshed thumbnail.
     - Fixed shadows.
     - Fixed entities getting properties from storage tank (water reflection, explosion, map color, mining time).

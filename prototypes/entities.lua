@@ -13,6 +13,7 @@ pipe_elbow.corpse = "pipe-remnants"
 pipe_elbow.max_health = pipe.max_health
 pipe_elbow.resistances = pipe.resistances
 pipe_elbow.fast_replaceable_group = pipe.fast_replaceable_group
+pipe_elbow.placeable_by = {item = "pipe", count = 1}
 pipe_elbow.collision_box = pipe.collision_box
 pipe_elbow.selection_box = pipe.selection_box
 pipe_elbow.dying_explosion = pipe.dying_explosion
@@ -104,6 +105,7 @@ check_valve = util.table.deepcopy(pipe_straight)
 check_valve.name = "check-valve"
 check_valve.icon = "__Flow Control__/graphics/icons/check-valve.png"
 check_valve.minable = {mining_time = 0.1, result = "check-valve"}
+check_valve.placeable_by = nil
 check_valve.fluid_box =
 {
   base_area = 1,
