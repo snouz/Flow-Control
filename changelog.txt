@@ -1,4 +1,14 @@
 ---------------------------------------------------------------------------------------------------
+Version: 3.1.0
+Date: 06. 12. 2020
+  Info:
+    - Updated by snouz
+  Changes:
+    - Valves visuals redone (in HD).
+    - Fixed shadows.
+    - Fixed entities getting properties from storage tank (water reflection, explosion, map color).
+    - Fixed wires positions on valves.
+---------------------------------------------------------------------------------------------------
 Version: 3.0.8
 Date: 06. 12. 2020
   Changes:
