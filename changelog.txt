@@ -13,6 +13,7 @@ Date: 12. 12. 2021
     - Fixed shadows.
     - Fixed entities getting properties from storage tank (water reflection, explosion, map color, mining time).
     - Fixed wires positions on valves.
+    - Adapted selection boxes to direction.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.8
 Date: 06. 12. 2020

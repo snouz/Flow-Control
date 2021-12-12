@@ -15,7 +15,7 @@ pipe_elbow.resistances = pipe.resistances
 pipe_elbow.fast_replaceable_group = pipe.fast_replaceable_group
 pipe_elbow.placeable_by = {item = "pipe", count = 1}
 pipe_elbow.collision_box = pipe.collision_box
-pipe_elbow.selection_box = pipe.selection_box
+pipe_elbow.selection_box = {{-0.35, -0.35}, {0.5, 0.5}}
 pipe_elbow.dying_explosion = pipe.dying_explosion
 pipe_elbow.friendly_map_color = {69,130,165}
 pipe_elbow.water_reflection = nil
@@ -51,6 +51,7 @@ pipe_elbow.working_sound = nil
 pipe_junction = util.table.deepcopy(pipe_elbow)
 pipe_junction.name = "pipe-junction"
 pipe_junction.icon = "__Flow Control__/graphics/icons/pipe-junction.png"
+pipe_junction.selection_box = {{-0.5, -0.35}, {0.5, 0.5}}
 pipe_junction.fluid_box.pipe_connections =
 {
   { position = {1, 0} },
@@ -78,6 +79,7 @@ pipe_junction.pictures =
 pipe_straight = util.table.deepcopy(pipe_elbow)
 pipe_straight.name = "pipe-straight"
 pipe_straight.icon = "__Flow Control__/graphics/icons/pipe-straight.png"
+pipe_straight.selection_box = {{-0.35, -0.5}, {0.35, 0.5}}
 pipe_straight.fluid_box.pipe_connections =
 {
   { position = {0, -1} },
@@ -104,6 +106,7 @@ pipe_straight.pictures =
 check_valve = util.table.deepcopy(pipe_straight)
 check_valve.name = "check-valve"
 check_valve.icon = "__Flow Control__/graphics/icons/check-valve.png"
+check_valve.selection_box = {{-0.5, -0.5}, {0.5, 0.5}}
 check_valve.minable = {mining_time = 0.1, result = "check-valve"}
 check_valve.placeable_by = nil
 check_valve.fluid_box =
