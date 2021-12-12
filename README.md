@@ -25,11 +25,16 @@ The valves and pump are unlocked by researching **Fluid handling**, the pipes ha
 ## Pipes
 - Elbow, T-junction and straight pipes, that only connect in appropriate directions. Each pipe is crafted from one normal pipe, and when mined drops a normal pipe.
 
-![Imgur](https://i.imgur.com/B50vSJ1.png)
+![Imgur](https://i.imgur.com/B50vSJ1.png) ![Imgur](https://i.imgur.com/RA5L82e.png)
 
 ## Settings
 
 - **New subgroup for pipe items** (enabled by default): Moves pipes, pumps and valves to a new line in the crafting menu
+- **Picked up pipes become base pipes** (enabled by default): When picking up T-Junction, elbow or straight pipes, it reverts back to normal pipes.
+
+## Recommended mods
+- [Flow Control for Bob's Logistics](https://mods.factorio.com/mod/flow-control-expanded-bob) | Compatibility mod to add flow control to Bob's pipes and merge valves.
+- [Fluid Must Flow](https://mods.factorio.com/mod/FluidMustFlow) | Adds larger pipes and valves.
 
 ## Credits
 - GotLag
