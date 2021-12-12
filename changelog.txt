@@ -1,6 +1,6 @@
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.0
-Date: 06. 12. 2020
+Date: 12. 12. 2021
   Info:
     - Updated by snouz
   Changes:
@@ -8,7 +8,7 @@ Date: 06. 12. 2020
     - New icons.
     - Refreshed thumbnail.
     - Fixed shadows.
-    - Fixed entities getting properties from storage tank (water reflection, explosion, map color).
+    - Fixed entities getting properties from storage tank (water reflection, explosion, map color, mining time).
     - Fixed wires positions on valves.
 ---------------------------------------------------------------------------------------------------
 Version: 3.0.8
