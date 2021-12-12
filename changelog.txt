@@ -5,6 +5,7 @@ Date: 06. 12. 2020
     - Updated by snouz
   Changes:
     - Valves visuals redone (in HD).
+    - New icons.
     - Fixed shadows.
     - Fixed entities getting properties from storage tank (water reflection, explosion, map color).
     - Fixed wires positions on valves.
