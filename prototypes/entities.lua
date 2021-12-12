@@ -103,7 +103,7 @@ pipe_straight.pictures =
 check_valve = util.table.deepcopy(pipe_straight)
 check_valve.name = "check-valve"
 check_valve.icon = "__Flow Control__/graphics/icons/check-valve.png"
-check_valve.minable = {mining_time = 1, result = "check-valve"}
+check_valve.minable = {mining_time = 0.1, result = "check-valve"}
 check_valve.fluid_box =
 {
   base_area = 1,
