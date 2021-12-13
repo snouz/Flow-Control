@@ -19,7 +19,7 @@ data:extend({
   {
     type = "item",
     name = "pipe-junction",
-    icon = "__Flow Control__/graphics/icons/pipe-junction.png",
+    icon = "__Flow Control__/graphics/icon/pipe-junction.png",
     icon_size = 64,
     subgroup = pipe_subgroup,
     order = "b[pipe]-a[pipe]c",
@@ -29,7 +29,7 @@ data:extend({
   {
     type = "item",
     name = "pipe-elbow",
-    icon = "__Flow Control__/graphics/icons/pipe-elbow.png",
+    icon = "__Flow Control__/graphics/icon/pipe-elbow.png",
     icon_size = 64,
     subgroup = pipe_subgroup,
     order = "b[pipe]-a[pipe]d",
@@ -39,7 +39,7 @@ data:extend({
   {
     type = "item",
     name = "pipe-straight",
-    icon = "__Flow Control__/graphics/icons/pipe-straight.png",
+    icon = "__Flow Control__/graphics/icon/pipe-straight.png",
     icon_size = 64,
     subgroup = pipe_subgroup,
     order = "b[pipe]-a[pipe]e",
@@ -49,7 +49,7 @@ data:extend({
   {
     type = "item",
     name = "check-valve",
-    icon = "__Flow Control__/graphics/icons/check-valve.png",
+    icon = "__Flow Control__/graphics/icon/check-valve.png",
     icon_size = 64,
     subgroup = pipe_subgroup,
     order = "b[pipe]-c[pump]b",
@@ -59,7 +59,7 @@ data:extend({
   {
     type = "item",
     name = "overflow-valve",
-    icon = "__Flow Control__/graphics/icons/overflow-valve.png",
+    icon = "__Flow Control__/graphics/icon/overflow-valve.png",
     icon_size = 64,
     subgroup = pipe_subgroup,
     order = "b[pipe]-c[pump]c",
@@ -69,7 +69,7 @@ data:extend({
   {
     type = "item",
     name = "underflow-valve",
-    icon = "__Flow Control__/graphics/icons/underflow-valve.png",
+    icon = "__Flow Control__/graphics/icon/underflow-valve.png",
     icon_size = 64,
     subgroup = pipe_subgroup,
     order = "b[pipe]-c[pump]d",

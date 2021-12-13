@@ -4,7 +4,7 @@ local pipe = data.raw["pipe"]["pipe"]
 -- Pipe Elbow ****************************************************************************
 pipe_elbow = util.table.deepcopy(data.raw["storage-tank"]["storage-tank"])
 pipe_elbow.name = "pipe-elbow"
-pipe_elbow.icon = "__Flow Control__/graphics/icons/pipe-elbow.png"
+pipe_elbow.icon = "__Flow Control__/graphics/icon/pipe-elbow.png"
 pipe_elbow.icon_size = 64
 pipe_elbow.icon_mipmaps = nil
 pipe_elbow.minable = pipe.minable
@@ -50,7 +50,7 @@ pipe_elbow.working_sound = nil
 -- Pipe Junction *************************************************************************
 pipe_junction = util.table.deepcopy(pipe_elbow)
 pipe_junction.name = "pipe-junction"
-pipe_junction.icon = "__Flow Control__/graphics/icons/pipe-junction.png"
+pipe_junction.icon = "__Flow Control__/graphics/icon/pipe-junction.png"
 pipe_junction.selection_box = {{-0.5, -0.35}, {0.5, 0.5}}
 pipe_junction.fluid_box.pipe_connections =
 {
@@ -78,7 +78,7 @@ pipe_junction.pictures =
 -- Pipe Straight *************************************************************************
 pipe_straight = util.table.deepcopy(pipe_elbow)
 pipe_straight.name = "pipe-straight"
-pipe_straight.icon = "__Flow Control__/graphics/icons/pipe-straight.png"
+pipe_straight.icon = "__Flow Control__/graphics/icon/pipe-straight.png"
 pipe_straight.selection_box = {{-0.35, -0.5}, {0.35, 0.5}}
 pipe_straight.fluid_box.pipe_connections =
 {
@@ -105,7 +105,7 @@ pipe_straight.pictures =
 -- Check Valve ***************************************************************************
 check_valve = util.table.deepcopy(pipe_straight)
 check_valve.name = "check-valve"
-check_valve.icon = "__Flow Control__/graphics/icons/check-valve.png"
+check_valve.icon = "__Flow Control__/graphics/icon/check-valve.png"
 check_valve.selection_box = {{-0.5, -0.5}, {0.5, 0.5}}
 check_valve.minable = {mining_time = 0.1, result = "check-valve"}
 check_valve.placeable_by = nil
@@ -143,7 +143,7 @@ check_valve.circuit_wire_max_distance = data.raw["storage-tank"]["storage-tank"]
 -- Overflow Valve ************************************************************************
 overflow_valve = util.table.deepcopy(check_valve)
 overflow_valve.name = "overflow-valve"
-overflow_valve.icon = "__Flow Control__/graphics/icons/overflow-valve.png"
+overflow_valve.icon = "__Flow Control__/graphics/icon/overflow-valve.png"
 overflow_valve.minable.result = "overflow-valve"
 overflow_valve.fluid_box.base_level = 0.8
 overflow_valve.pictures.picture.sheet.filename = "__Flow Control__/graphics/entity/overflow-valve/overflow-valve.png"
@@ -152,7 +152,7 @@ overflow_valve.pictures.picture.sheet.hr_version.filename = "__Flow Control__/gr
 -- Underflow Valve ***********************************************************************
 underflow_valve = util.table.deepcopy(overflow_valve)
 underflow_valve.name = "underflow-valve"
-underflow_valve.icon = "__Flow Control__/graphics/icons/underflow-valve.png"
+underflow_valve.icon = "__Flow Control__/graphics/icon/underflow-valve.png"
 underflow_valve.minable.result = "underflow-valve"
 underflow_valve.fluid_box.base_level = -0.2
 underflow_valve.pictures.picture.sheet.filename = "__Flow Control__/graphics/entity/underflow-valve/underflow-valve.png"
