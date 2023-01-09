@@ -4,21 +4,21 @@ The valves and pump are unlocked by researching **Fluid handling**, the pipes ha
 ## Non-return valve
 - Also known as a check valve, this allows full-speed flow in one direction, indicated by the green arrow.
 - Can output its fluid level to red/green wires.
-- Recipe: 1 iron plate, 1 iron gear, 1 pipe
+- Recipe: <sup>1</sup> <img title="Iron plate" src="https://i.imgur.com/tUJWXWG.png" height="23px">, <sup>1</sup> <img title="Iron gear wheel" src="https://i.imgur.com/9cwwzNR.png" height="23px">, <sup>1</sup> <img title="Pipe" src="https://i.imgur.com/G5HG09q.png" height="23px">
 
 ![Imgur](https://i.imgur.com/ERZjqBD.png)
 
 ## Overflow valve
 - Allows flow in the direction of the orange arrow, but only when the input pressure is above 80% (i.e. the attached pipe or tank is 80% full). The maximum flow rate of the overflow valve is less than a regular pipe.  Useful as an outlet for excess production, for example cracking excess heavy oil when lubricant supply exceeds demand.
 - Can output its fluid level to red/green wires.
-- Recipe: 1 electronic circuit, 1 iron plate, 1 iron gear, 1 pipe
+- Recipe: <sup>1</sup> <img title="Electronic plate" src="https://i.imgur.com/jFYe9o6.png" height="17px">, <sup>1</sup> <img title="Iron plate" src="https://i.imgur.com/tUJWXWG.png" height="23px">, <sup>1</sup> <img title="Iron gear wheel" src="https://i.imgur.com/9cwwzNR.png" height="23px">, <sup>1</sup> <img title="Pipe" src="https://i.imgur.com/G5HG09q.png" height="23px">
 
 ![Imgur](https://i.imgur.com/TlMhIty.png)
 
 ## Top-up valve
 - Allows flow in the direction of the white arrow, but only when the output pressure is below 80% (i.e. the attached pipe or tank is less than 80% full). The maximum flow rate of the float valve is less than a regular pipe.  Useful for topping up or acting as a reduced-priority fluid input. Note that a small amount of fluid will remain in this valve when the pipe is emptied.
 - Can output its fluid level to red/green wires.
-- Recipe: 1 electronic circuit, 1 iron plate, 1 iron gear, 1 pipe
+- Recipe: <sup>1</sup> <img title="Electronic plate" src="https://i.imgur.com/jFYe9o6.png" height="17px">, <sup>1</sup> <img title="Iron plate" src="https://i.imgur.com/tUJWXWG.png" height="23px">, <sup>1</sup> <img title="Iron gear wheel" src="https://i.imgur.com/9cwwzNR.png" height="23px">, <sup>1</sup> <img title="Pipe" src="https://i.imgur.com/G5HG09q.png" height="23px">
 
 ![Imgur](https://i.imgur.com/CydWgeR.png)
 
