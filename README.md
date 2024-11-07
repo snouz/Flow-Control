@@ -39,3 +39,4 @@ The valves and pump are unlocked by researching **Fluid handling**, the pipes ha
 ## Credits
 - GotLag
 - snouz (new graphics and details)
+- stringweasel (for update to Factorio 2.0)

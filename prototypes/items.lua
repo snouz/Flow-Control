@@ -46,34 +46,4 @@ data:extend({
     place_result = "pipe-straight",
     stack_size = 50
   },
-  {
-    type = "item",
-    name = "check-valve",
-    icon = "__Flow Control__/graphics/icon/check-valve.png",
-    icon_size = 64,
-    subgroup = pipe_subgroup,
-    order = "b[pipe]-c[pump]b",
-    place_result = "check-valve",
-    stack_size = 50
-  },
-  {
-    type = "item",
-    name = "overflow-valve",
-    icon = "__Flow Control__/graphics/icon/overflow-valve.png",
-    icon_size = 64,
-    subgroup = pipe_subgroup,
-    order = "b[pipe]-c[pump]c",
-    place_result = "overflow-valve",
-    stack_size = 50
-  },
-  {
-    type = "item",
-    name = "underflow-valve",
-    icon = "__Flow Control__/graphics/icon/underflow-valve.png",
-    icon_size = 64,
-    subgroup = pipe_subgroup,
-    order = "b[pipe]-c[pump]d",
-    place_result = "underflow-valve",
-    stack_size = 50
-  },
 })

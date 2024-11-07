@@ -7,11 +7,11 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"iron-plate", 1},
-      {"iron-gear-wheel", 1},
-      {"pipe", 1}
+      {type = "item", name = "iron-plate", amount = 1},
+      {type = "item", name = "iron-gear-wheel", amount = 1},
+      {type = "item", name = "pipe",amount =  1}
     },
-    result = "check-valve"
+    results = {{type = "item", name = "check-valve", amount = 1}},
   },
   {
     type = "recipe",
@@ -20,12 +20,12 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"electronic-circuit", 1},
-      {"iron-plate", 1},
-      {"iron-gear-wheel", 1},
-      {"pipe", 1}
+      {type = "item", name = "electronic-circuit", amount = 1},
+      {type = "item", name = "iron-plate", amount = 1},
+      {type = "item", name = "iron-gear-wheel", amount = 1},
+      {type = "item", name = "pipe", amount = 1}
     },
-    result = "overflow-valve"
+    results = {{type = "item", name = "overflow-valve", amount = 1}},
   },
   {
     type = "recipe",
@@ -34,12 +34,12 @@ data:extend(
     enabled = false,
     ingredients =
     {
-      {"electronic-circuit", 1},
-      {"iron-plate", 1},
-      {"iron-gear-wheel", 1},
-      {"pipe", 1}
+      {type = "item", name = "electronic-circuit", amount = 1},
+      {type = "item", name = "iron-plate", amount = 1},
+      {type = "item", name = "iron-gear-wheel", amount = 1},
+      {type = "item", name = "pipe", amount = 1}
     },
-    result = "underflow-valve"
+    results = {{type = "item", name = "underflow-valve", amount = 1}},
   },
   {
     type = "recipe",
@@ -47,9 +47,9 @@ data:extend(
     energy_required = 0.01,
     ingredients =
     {
-      {"pipe", 1}
+      {type = "item", name = "pipe", amount = 1}
     },
-    result = "pipe-elbow"
+    results = {{type = "item", name = "pipe-elbow", amount = 1}},
   },
   {
     type = "recipe",
@@ -57,9 +57,9 @@ data:extend(
     energy_required = 0.01,
     ingredients =
     {
-      {"pipe", 1}
+      {type = "item", name = "pipe", amount = 1}
     },
-    result = "pipe-junction"
+    results = {{type = "item", name = "pipe-junction", amount = 1}},
   },
   {
     type = "recipe",
@@ -67,8 +67,8 @@ data:extend(
     energy_required = 0.01,
     ingredients =
     {
-      {"pipe", 1}
+      {type = "item", name = "pipe", amount = 1}
     },
-    result = "pipe-straight"
+    results = {{type = "item", name = "pipe-straight", amount = 1}},
   }
 })
