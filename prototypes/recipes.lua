@@ -3,7 +3,7 @@ data:extend(
   {
     type = "recipe",
     name = "pipe-elbow",
-    energy_required = 0.01,
+    energy_required = 0.2,
     ingredients =
     {
       {type = "item", name = "pipe", amount = 1}
@@ -13,7 +13,7 @@ data:extend(
   {
     type = "recipe",
     name = "pipe-junction",
-    energy_required = 0.01,
+    energy_required = 0.2,
     ingredients =
     {
       {type = "item", name = "pipe", amount = 1}
@@ -23,7 +23,7 @@ data:extend(
   {
     type = "recipe",
     name = "pipe-straight",
-    energy_required = 0.01,
+    energy_required = 0.2,
     ingredients =
     {
       {type = "item", name = "pipe", amount = 1}
