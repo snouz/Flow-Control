@@ -23,8 +23,8 @@ pipe_elbow.fluid_box =
   pipe_covers = pipecoverspictures(),
   pipe_connections =
   {
-    { position = {1, 0} },
-    { position = {0, 1} }
+    { direction = defines.direction.east,   position = {0, 0} },
+    { direction = defines.direction.south,  position = {0, 0} }
   },
   hide_connection_info = true,
 }
@@ -53,9 +53,9 @@ pipe_junction.icon = "__Flow Control__/graphics/icon/pipe-junction.png"
 pipe_junction.selection_box = {{-0.5, -0.35}, {0.5, 0.5}}
 pipe_junction.fluid_box.pipe_connections =
 {
-  { position = {1, 0} },
-  { position = {0, 1} },
-  { position = {-1, 0} }
+  { direction = defines.direction.east, position = {0, 0} },
+  { direction = defines.direction.west, position = {0, 0} },
+  { direction = defines.direction.south, position = {0, 0} }
 }
 pipe_junction.pictures =
 {
@@ -79,8 +79,8 @@ pipe_straight.icon = "__Flow Control__/graphics/icon/pipe-straight.png"
 pipe_straight.selection_box = {{-0.35, -0.5}, {0.35, 0.5}}
 pipe_straight.fluid_box.pipe_connections =
 {
-  { position = {0, -1} },
-  { position = {0, 1} }
+  { direction = defines.direction.north, position = {0, 0} },
+  { direction = defines.direction.south, position = {0, 0} }
 }
 pipe_straight.pictures =
 {
