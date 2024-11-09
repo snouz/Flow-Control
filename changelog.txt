@@ -4,6 +4,8 @@ Date: 09. 11. 2024
   Features:
     - Update to 2.0 by stringweasel.
     - Valves are now added through a dependency with the Valves mod.
+  Bugfixes:
+    - Fixed pipe section recipes being available from game start, and not after technology research.
 ---------------------------------------------------------------------------------------------------
 Version: 3.1.4
 Date: 09. 01. 2023
