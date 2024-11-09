@@ -1,3 +1,5 @@
+local item_sounds = require("__base__.prototypes.item_sounds")
+
 local pipe_subgroup = "energy-pipe-distribution"
 
 if settings.startup["flow-control-new-group"].value then
@@ -23,6 +25,9 @@ data:extend({
     icon_size = 64,
     subgroup = pipe_subgroup,
     order = "b[pipe]-a[pipe]c",
+    inventory_move_sound = item_sounds.metal_small_inventory_move,
+    pick_sound = item_sounds.metal_small_inventory_pickup,
+    drop_sound = item_sounds.metal_small_inventory_move,
     place_result = "pipe-junction",
     stack_size = 50
   },
@@ -33,6 +38,9 @@ data:extend({
     icon_size = 64,
     subgroup = pipe_subgroup,
     order = "b[pipe]-a[pipe]d",
+    inventory_move_sound = item_sounds.metal_small_inventory_move,
+    pick_sound = item_sounds.metal_small_inventory_pickup,
+    drop_sound = item_sounds.metal_small_inventory_move,
     place_result = "pipe-elbow",
     stack_size = 50
   },
@@ -43,6 +51,9 @@ data:extend({
     icon_size = 64,
     subgroup = pipe_subgroup,
     order = "b[pipe]-a[pipe]e",
+    inventory_move_sound = item_sounds.metal_small_inventory_move,
+    pick_sound = item_sounds.metal_small_inventory_pickup,
+    drop_sound = item_sounds.metal_small_inventory_move,
     place_result = "pipe-straight",
     stack_size = 50
   },
