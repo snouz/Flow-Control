@@ -1,31 +1,27 @@
-This mod adds three valves and three rotatable pipe shapes with limited connectivity.
-The valves and pump are unlocked by researching **Fluid handling**, the pipes have no research requirement.
+# Flow Control
 
-## Non-return valve
-- Also known as a check valve, this allows full-speed flow in one direction, indicated by the green arrow.
-- Can output its fluid level to red/green wires.
-- Recipe: 1 iron plate, 1 iron gear, 1 pipe
+This mod has two main features: specific rotatable pipe sections and valves.
 
-![Imgur](https://i.imgur.com/ERZjqBD.png)
+## Specific Rotatable Pipe Seconds
 
-## Overflow valve
-- Allows flow in the direction of the orange arrow, but only when the input pressure is above 80% (i.e. the attached pipe or tank is 80% full). The maximum flow rate of the overflow valve is less than a regular pipe.  Useful as an outlet for excess production, for example cracking excess heavy oil when lubricant supply exceeds demand.
-- Can output its fluid level to red/green wires.
-- Recipe: 1 electronic circuit, 1 iron plate, 1 iron gear, 1 pipe
+Using these three new pipe sections you can build almost any pipe layout without worrying about unwanted connections. Each pipe is crafted from one normal pipe, and when mined drops a normal pipe.
 
-![Imgur](https://i.imgur.com/TlMhIty.png)
+- **Elbow**
+- **T-Junction**
+- **Straight**
 
-## Top-up valve
-- Allows flow in the direction of the white arrow, but only when the output pressure is below 80% (i.e. the attached pipe or tank is less than 80% full). The maximum flow rate of the float valve is less than a regular pipe.  Useful for topping up or acting as a reduced-priority fluid input. Note that a small amount of fluid will remain in this valve when the pipe is emptied.
-- Can output its fluid level to red/green wires.
-- Recipe: 1 electronic circuit, 1 iron plate, 1 iron gear, 1 pipe
+![Imgur](https://i.imgur.com/B50vSJ1.png)
 
-![Imgur](https://i.imgur.com/CydWgeR.png)
+## Valves
 
-## Pipes
-- Elbow, T-junction and straight pipes, that only connect in appropriate directions. Each pipe is crafted from one normal pipe, and when mined drops a normal pipe.
+This mod includes three valves from the [Valves](https://mods.factorio.com/mod/valves) mod.
+- **One way valve:** Only allows flow in one direction, when the input fluid level is higher than the output fluid level.
+- **Overflow valve:** Only allows flow in one direction when the input is higher than 80% full.
+- **Top up valve:** Only allows flow in one direction when the output is higher than 50% full.
 
-![Imgur](https://i.imgur.com/B50vSJ1.png) ![Imgur](https://i.imgur.com/RA5L82e.png)
+These thresholds are also customizable with easy shortcuts (`Numpad +/-`) with the defaults configurable in the map settings.
+
+![](https://assets-mod.factorio.com/assets/bafb8826075e9dfb36bdea25709280c86a23f098.png)
 
 ## Settings
 
@@ -39,3 +35,4 @@ The valves and pump are unlocked by researching **Fluid handling**, the pipes ha
 ## Credits
 - GotLag
 - snouz (new graphics and details)
+- stringweasel
