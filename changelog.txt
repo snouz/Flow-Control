@@ -3,6 +3,8 @@ Version: 3.2.1
 Date: 09. 11. 2024
   Bugfixes:
     - Fix rare startup crash when other mods define a next_upgrade to the storage tank.
+  Localization:
+    - Added Dutch translations by Vivaloz.
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.0
 Date: 09. 11. 2024
