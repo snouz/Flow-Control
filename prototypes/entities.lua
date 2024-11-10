@@ -11,6 +11,7 @@ pipe_elbow.corpse = "pipe-remnants"
 pipe_elbow.max_health = pipe.max_health
 pipe_elbow.resistances = pipe.resistances
 pipe_elbow.fast_replaceable_group = pipe.fast_replaceable_group
+pipe_elbow.next_upgrade = nil -- Make sure it's empty for mods that might add an upgrade to the storage tank
 pipe_elbow.placeable_by = {item = "pipe", count = 1}
 pipe_elbow.collision_box = pipe.collision_box
 pipe_elbow.selection_box = {{-0.35, -0.35}, {0.5, 0.5}}
