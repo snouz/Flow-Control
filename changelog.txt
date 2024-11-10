@@ -6,6 +6,7 @@ Date: 09. 11. 2024
   Localization:
     - Added Dutch translations by Vivaloz.
     - Updated German translations by bartschinski.
+    - Updated Russian translations by dodther.
 ---------------------------------------------------------------------------------------------------
 Version: 3.2.0
 Date: 09. 11. 2024
