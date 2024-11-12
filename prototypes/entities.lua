@@ -18,6 +18,7 @@ pipe_elbow.selection_box = {{-0.35, -0.35}, {0.5, 0.5}}
 pipe_elbow.dying_explosion = pipe.dying_explosion
 pipe_elbow.friendly_map_color = {69,130,165}
 pipe_elbow.water_reflection = nil
+pipe_elbow.icon_draw_specification  = pipe.icon_draw_specification
 pipe_elbow.fluid_box =
 {
   volume = 100,
