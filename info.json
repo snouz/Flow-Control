@@ -8,6 +8,6 @@
   "factorio_version": "2.0",
   "dependencies": [
     "base >= 2.0.8",
-    ? "valves >= 1.0.0"
+    "? valves >= 1.0.0"
   ]
 }
