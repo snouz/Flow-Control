@@ -1,7 +1,3 @@
-# Flow Control
-
-This mod has two main features: specific rotatable pipe sections and valves.
-
 ## Rotatable Pipe Sections
 
 Using these three new pipe sections you can build almost any pipe layout without worrying about unwanted connections. Each pipe is crafted from one normal pipe, and when mined drops a normal pipe.
