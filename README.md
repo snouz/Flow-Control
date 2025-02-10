@@ -19,6 +19,7 @@ Overflow, top-up and check valves have been moved to the optional [Valves](https
 - **Picked up pipes become base pipes** (enabled by default): When picking up T-Junction, elbow or straight pipes, they revert back to normal pipes.
 
 ## Recommended mods
+- [Valves](https://mods.factorio.com/mod/valves) | Adds basic overflow, top-up and check valves.
 - [Flow Control for Bob's Logistics](https://mods.factorio.com/mod/flow-control-expanded-bob) | Compatibility mod to add flow control to Bob's pipes and merge valves.
 - [Fluid Must Flow](https://mods.factorio.com/mod/FluidMustFlow) | Adds larger pipes and valves.
 
