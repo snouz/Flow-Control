@@ -29,7 +29,8 @@ data:extend({
     pick_sound = item_sounds.metal_small_inventory_pickup,
     drop_sound = item_sounds.metal_small_inventory_move,
     place_result = "pipe-junction",
-    stack_size = 50
+    stack_size = 50,
+    weight = 5 * kg
   },
   {
     type = "item",
@@ -42,7 +43,8 @@ data:extend({
     pick_sound = item_sounds.metal_small_inventory_pickup,
     drop_sound = item_sounds.metal_small_inventory_move,
     place_result = "pipe-elbow",
-    stack_size = 50
+    stack_size = 50,
+    weight = 5 * kg
   },
   {
     type = "item",
@@ -55,6 +57,7 @@ data:extend({
     pick_sound = item_sounds.metal_small_inventory_pickup,
     drop_sound = item_sounds.metal_small_inventory_move,
     place_result = "pipe-straight",
-    stack_size = 50
+    stack_size = 50,
+    weight = 5 * kg
   },
 })
